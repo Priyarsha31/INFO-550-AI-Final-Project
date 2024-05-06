@@ -208,7 +208,7 @@ def sudoku_csp_solver(board):
 
 def sudoku_game(window, font):
     window.fill(BACKGROUND_COLOR)
-    board = generate_sudoku(mask_rate=0.05)  # Generate a board with some cells empty
+    board = generate_sudoku(mask_rate=0.5)  # Generate a board with some cells empty
     initial_board = [row[:] for row in board]  # Keep a copy to avoid changing the initial numbers
 
     block_size = 50  # Size of each Sudoku block

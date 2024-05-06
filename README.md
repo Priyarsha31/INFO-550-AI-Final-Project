@@ -13,9 +13,19 @@ Welcome to the AI CSP Escape Room Challenge! This project presents a collection 
 
 ### Running the Game
 Navigate to the project directory in your terminal or command prompt.
-Run the main.py file by executing the following command:
 
---> 'python main.py'
+Run the following command to install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+This will install the necessary dependencies, including the Pygame library.
+
+After installing the dependencies, run the main.py file by executing the following command:
+
+```bash
+python main.py
+```
 
 The game window will open, displaying the welcome screen and instructions.
 
@@ -38,6 +48,9 @@ This file contains the main entry point for the game. It initializes the Pygame 
 
 ### 'settings.py'
 This file defines various constants used throughout the game, such as window dimensions, colors, and FPS (frames per second).
+
+### 'requirements.txt'
+Contains a list of Python dependencies required to run the game.
 
 ### 'utils.py'
 This module provides utility functions used for image loading and manipulation, as well as drawing tiles on the game window.
