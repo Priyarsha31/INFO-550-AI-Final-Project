@@ -2,6 +2,7 @@ import pygame
 import random
 from settings import *
 import sys
+from pathlib import Path
 from utils import load_and_slice_image, draw_tiles
 from constraint import Problem, AllDifferentConstraint
 from pygame.locals import QUIT, KEYDOWN, MOUSEBUTTONDOWN
@@ -12,6 +13,8 @@ pygame.display.set_caption('AI CSP Escape Room Challenge')
 clock = pygame.time.Clock()
 font = pygame.font.Font(None, 36)
 
+basepath = Path(__file__).resolve().parents[0]
+
 def csp_constraints(tile_order):
     problem = Problem()
     problem.addVariables(range(len(tile_order)), range(len(tile_order)))
@@ -19,7 +22,7 @@ def csp_constraints(tile_order):
     return problem.getSolutions()
 
 def jigsaw_puzzle(window, font):
-    tiles, tile_width, tile_height = load_and_slice_image('C:/Users/Administrator/INFO-550-AI-Final-Project/scary.jpg', 3, 3)
+    tiles, tile_width, tile_height = load_and_slice_image(basepath/'scary.jpg', 3, 3)
     tile_order = list(range(9))
     random.shuffle(tile_order)
 
